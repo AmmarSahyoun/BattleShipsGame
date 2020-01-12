@@ -1,31 +1,38 @@
 package com.company;
 
-public class BattleShipsProgram {
+public class Program {
 
-        do
+    ComputerPlayer computerPlayer = new ComputerPlayer();
+    HumanPlayer humanPlayer = new HumanPlayer();
 
-    {
-        Position shotCoords = humanPlayer.getShotCoordinates();
-        computerPlayer.shootAt(shotCoords);
+
+    public Program() {
+        computerPlayer.placeShips();
+        humanPlayer.placeShips();
+    }
+
+    public void start() {
+
         computerPlayer.renderMap();
-
-        shotCoords = computerPlayer.getShotCoordinates();
-        humanPlayer.shootAt(shotCoords);
         humanPlayer.renderMap();
 
-    }while(computerPlayer.hasFloatingShips()&&humanPlayer.hasFloatingShips());
+        do {
+            Position shotCoords = humanPlayer.getShotCoordinates();
+            computerPlayer.shootAt(shotCoords);
+            computerPlayer.renderMap();
 
-        if(humanPlayer.hasFloatingShips())
+            shotCoords = computerPlayer.getShotCoordinates();
+            humanPlayer.shootAt(shotCoords);
+            humanPlayer.renderMap();
 
-    {
-        System.out.println("You WON the game!");
-    }
-        else
+        } while (computerPlayer.hasFloatingShips() && humanPlayer.hasFloatingShips());
 
-    {
-        System.out.println("You lost the game!");
+        if (humanPlayer.hasFloatingShips()) {
+            System.out.println("You have won the game!");
+        } else {
+            System.out.println("You lost the game!");
+        }
+
     }
 
 }
-
-

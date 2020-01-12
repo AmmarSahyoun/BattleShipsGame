@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class HumanPlayer extends Player {
 
-    public HumanPlayer(){
+    public HumanPlayer() {
         super("Human");
     }
 
-    public Position getShotCoordinates(){
+    public Position getShotCoordinates() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter x and y coordinates, e.g. 2,3");
         String coords = scanner.nextLine();
