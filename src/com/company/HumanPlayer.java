@@ -9,8 +9,8 @@ public class HumanPlayer extends Player {
     }
 
     public Position getShotCoordinates() {
+        System.out.println("Enter x and y coordinates, e.g. 1,3");
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter x and y coordinates, e.g. 2,3");
         String coords = scanner.nextLine();
         String[] coordParts = coords.split(",");
 

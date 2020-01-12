@@ -12,7 +12,12 @@ public class Program {
     }
 
     public void start() {
-
+        System.out.println("");
+        System.out.println("");
+        System.out.println("                ..:Battle Ships:.. ");
+        System.out.println("- Place your ship in a new position (horizontal/vertical) ");
+        System.out.println("             to hide/shoot your enemy.. ");
+        System.out.println("");
         computerPlayer.renderMap();
         humanPlayer.renderMap();
 

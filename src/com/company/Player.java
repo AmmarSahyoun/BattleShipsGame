@@ -30,4 +30,18 @@ public abstract class Player {
         }
     }
 
+
+    public void renderMap() {
+        System.out.println(name + " map:");
+        map.render();
+    }
+
+    public void shootAt(Position pos) {
+        map.shootAt(pos);
+    }
+
+    public boolean hasFloatingShips() {
+        return map.hasFloatingShips();
+    }
+
 }
